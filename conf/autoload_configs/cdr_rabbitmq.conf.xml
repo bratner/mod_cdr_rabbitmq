@@ -1,0 +1,21 @@
+<configuration name="cdr_rabbitmq.conf" description="RabbitMQ CDR logger">
+  <settings>
+    <param name="host" value="127.0.0.1"/>
+    <param name="port" value="5672"/>
+
+    <param name="username" value="freeswitch"/>
+    <param name="password" value="secret"/>
+
+    <param name="vhost" value="cdrs"/>
+    <param name="exchange" value="cdr-exchange"/>
+    <param name="routing_key" value="cdr-key"/>
+
+    <!-- If true, create CDR for B-leg of call (default: true) -->
+    <param name="log-b-leg" value="false"/>
+    <!-- optional exchange and routing_key for leg-b cdrs -->
+    <!-- <param name="exchange_b" value="cdr-exchange"/> -->
+    <!-- <param name="routing_key_b" value="cdr-key"/> -->
+    <!-- if true then json values are url-encoded (default: true) -->
+    <!-- <param name="encode" value="true" />
+ </settings>
+</configuration>
